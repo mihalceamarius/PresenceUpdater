@@ -350,7 +350,6 @@ public class PresenceUpdater {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);				// seteaza inchiderea ferestrei JFrame - inchidere aplicatie
 		frame.setResizable(false);											// seteaza redimensionarea ferestrei JFrame - fara redimensionare
 		frame.getContentPane().setLayout(null);								// seteaza amplasarea in cadrul ferestrei JFrame - fara amplasare
-		
 		frame.setIconImage(new ImageIcon(PresenceUpdater.class.getResource(ICON_PATH)).getImage());
 		
 		/* Initializarea primei etichete JLabel */
