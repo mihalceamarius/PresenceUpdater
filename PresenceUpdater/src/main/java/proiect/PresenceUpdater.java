@@ -82,7 +82,7 @@ public class PresenceUpdater {
 	private static final JsonFactory JSON_FACTORY = JacksonFactory
 			.getDefaultInstance();
 	private static final String CREDENTIALS_FILE_PATH = "/credentials.json";
-	private static final String ICON_PATH = "/icon.png";
+	private static final String ICON_PATH = "/Icon.png";
 	private static final String TOKENS_DIRECTORY_PATH = "tokens";
 	private static final String APPLICATION_NAME = "PIP-pr";
 	private static List<String> paths = new ArrayList<String>();
@@ -343,15 +343,15 @@ public class PresenceUpdater {
 		return range;
 	}
 
-	private static void firstInitializationGUI() {
+	private static void firstInitializationGUI() throws IOException {
 		/* Initializarea ferestrei JFrame */
 		frame.setTitle("Presence Updater");									// seteaza titlul ferestrei	JFrame
 		frame.setBounds(100, 100, 535, 650);								// seteaza limitele ferestrei JFrame
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);				// seteaza inchiderea ferestrei JFrame - inchidere aplicatie
 		frame.setResizable(false);											// seteaza redimensionarea ferestrei JFrame - fara redimensionare
 		frame.getContentPane().setLayout(null);								// seteaza amplasarea in cadrul ferestrei JFrame - fara amplasare
-		frame.setIconImage(new ImageIcon(PresenceUpdater.class
-				.getResource(ICON_PATH)).getImage());
+		
+		frame.setIconImage(new ImageIcon(PresenceUpdater.class.getResource(ICON_PATH)).getImage());
 		
 		/* Initializarea primei etichete JLabel */
 		label1.setBounds(150, 10, 215, 20);									// seteaza limitele primei etichete JLabel
